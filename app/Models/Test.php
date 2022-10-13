@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Test extends Model
 {
     use HasFactory;
+
+    public function subtests() {
+        return $this->hasMany(Subtest::class);
+    }
 }
